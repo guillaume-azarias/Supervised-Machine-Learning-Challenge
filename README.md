@@ -1,21 +1,23 @@
-# Supervised Learning Challenge
+## Supervised Machine Learning challenge on an imbalanced dataset
 
-Let’s take what you’ve learned over the past week and put it into practice. The dataset we will be using contains two CSV files ‘features’ and ‘target’.
+*Keywords:*
 
-Each row in the ‘features’ belongs to a ‘measurement’ and each column represents a ‘feature’. For each row in the ‘features’ you have a corresponding class label in ‘target’. You can consider the row-numbers as keys.
+**Imbalanced dataset, XGBClassifier**
 
-You will have to use data labelled as ‘train’ for implementing the models. You have to submit the results that you obtain from the predictions of your Machine Learning models from the data labelled as ‘test’.
+*Forewords:*
 
-Complete the following:
-- Explore your data. Can you identify anything interest that is worth noting from the data?
+This script has been written during a Kaggle competition at the [Propulsion Academy](https://propulsion.academy/) during the Data Science Bootcamp 2020 (you can check the final project presentation of the student batch [here](https://drive.google.com/file/d/1WYcEVMIcYaRl6J4hg43KhBM5hvwHtYui/view?usp=sharing)). It was co-written with Chris Riccione.
+
+*Dataset:*
+
+The dataset contains two CSV files ‘features’ and ‘target’. Each row in the ‘features’ belongs to a ‘measurement’ and each column represents a ‘feature’. For each row in the ‘features’ there is a corresponding class label in ‘target’. Row-numbers are considered as keys. A dataset named ‘train’ was used to implement the models. The results obtained from the predictions of the Machine Learning models were submitted using a test dataset.
+
+*Challenge:*
+
+- Explore the data. Identify anything interest that is worth noting from the data?
 - Define a set of possible classifiers and show which one performs best. Keep in mind the problem of overfitting.
-- Using feature selection try to reduce the number of features. In the dataset you have over 120 features. Find the good ones for your classifier.
+- Using feature selection try to reduce the number of features. In the dataset there are over 120 features. Find the good ones for the classifier.
 
-Keep in mind that there is no best solution to the challenge. Show how you approach a problem, and the skills/methods you use in that approach.
+*Note on the data:*
 
-### Evaluation Process:
-Sklearn scoring technique to increase is ‘f1_macro’. After you finish your best model, please save your predictions to CSV file with the column names ‘Id’ and ‘Predicted’. No index column!
-
-Submit your CSV file in ‘Submit Predictions’ section.
-
-You can check your score in ‘My Submissions’ section and choose the one to make it Final Score by checking the ‘Use for Final Score’ checkbox.
+The data exploration revealed that the dataset was **imbalanced**. The key in this challenge was to downsample the groups containing the most frequent label to prevent **overfitting*.
